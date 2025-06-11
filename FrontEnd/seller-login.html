@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion Vendeur - NovaShop</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .login-container { max-width: 400px; margin: 60px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px #0001; }
+        .login-container h2 { color: #2ecc71; text-align: center; }
+        .login-container label { display: block; margin-top: 15px; }
+        .login-container input { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
+        .login-container button { width: 100%; margin-top: 20px; }
+        .logo { font-size: 2rem; font-weight: bold; color: #2ecc71; text-align: center; margin-bottom: 20px; }
+        .logo span { color: #e67e22; }
+    </style>
+</head>
+<body class="login-page">
+    <div class="logo">Nova<span>Shop</span></div>
+    <div class="login-container">
+        <h2>Connexion Vendeur</h2>
+        <form>
+            <label for="seller-email">Email</label>
+            <input type="email" id="seller-email" required>
+            <label for="seller-password">Mot de passe</label>
+            <input type="password" id="seller-password" required>
+            <button type="submit" class="btn btn-primary">Se connecter</button>
+        </form>
+        <p style="text-align:center;margin-top:15px;">
+            <a href="seller-register.html">Créer un compte vendeur</a>
+        </p>
+        <p style="text-align:center;">
+            <a href="index.html">Retour à l'accueil</a>
+        </p>
+    </div>
+</body>
+</html>

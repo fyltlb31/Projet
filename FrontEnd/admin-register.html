@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription Admin - NovaShop</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .register-container { max-width: 400px; margin: 60px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px #0001; }
+        .register-container h2 { color: #3498db; text-align: center; }
+        .register-container label { display: block; margin-top: 15px; }
+        .register-container input { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
+        .register-container button { width: 100%; margin-top: 20px; }
+        /* Désactive le centrage du logo local, laisse le style global gérer */
+        /* .logo { font-size: 2rem; font-weight: bold; color: #3498db; text-align: center; margin-bottom: 20px; }
+        .logo span { color: #e67e22; } */
+    </style>
+</head>
+<body class="register-page">
+    <header>
+        <div class="container header-content">
+            <div class="logo">Nova<span>Shop</span></div>
+        </div>
+    </header>
+    <div class="register-container">
+        <h2>Inscription Admin</h2>
+        <form>
+            <label for="admin-name">Nom</label>
+            <input type="text" id="admin-name" required>
+            <label for="admin-email">Email</label>
+            <input type="email" id="admin-email" required>
+            <label for="admin-password">Mot de passe</label>
+            <input type="password" id="admin-password" required>
+            <button type="submit" class="btn btn-primary">S'inscrire</button>
+        </form>
+        <p style="text-align:center;margin-top:15px;">
+            <a href="admin-login.html">Déjà un compte ? Se connecter</a>
+        </p>
+        <p style="text-align:center;">
+            <a href="index.html">Retour à l'accueil</a>
+        </p>
+    </div>
+</body>
+</html>

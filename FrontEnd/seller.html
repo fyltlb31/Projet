@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Interface Vendeur</title>
+    <link rel="stylesheet" href="seller.css">
+</head>
+<body>
+
+<div class="logo">Nova<span>Shop</span></div>
+
+<!-- Formulaires Connexion/Inscription Vendeur -->
+<div id="seller-auth-container" style="max-width:400px;margin:40px auto 0;">
+    <div id="seller-login-form">
+        <h2 style="color:#2ecc71;text-align:center;">Connexion Vendeur</h2>
+        <form id="seller-login">
+            <label for="seller-email">Email</label>
+            <input type="email" id="seller-email" required>
+            <label for="seller-password">Mot de passe</label>
+            <input type="password" id="seller-password" required>
+            <button type="submit" class="btn btn-primary" style="width:100%;margin-top:20px;">Se connecter</button>
+        </form>
+        <p style="text-align:center;margin-top:15px;">
+            <a href="#" id="show-seller-register">Créer un compte vendeur</a>
+        </p>
+    </div>
+    <div id="seller-register-form" style="display:none;">
+        <h2 style="color:#2ecc71;text-align:center;">Inscription Vendeur</h2>
+        <form id="seller-register">
+            <label for="seller-name">Nom</label>
+            <input type="text" id="seller-name" required>
+            <label for="seller-email-register">Email</label>
+            <input type="email" id="seller-email-register" required>
+            <label for="seller-password-register">Mot de passe</label>
+            <input type="password" id="seller-password-register" required>
+            <button type="submit" class="btn btn-primary" style="width:100%;margin-top:20px;">S'inscrire</button>
+        </form>
+        <p style="text-align:center;margin-top:15px;">
+            <a href="#" id="show-seller-login">Déjà un compte ? Se connecter</a>
+        </p>
+    </div>
+</div>
+
+<!-- Espace vendeur masqué tant que non connecté -->
+<div id="seller-space" style="display:none;">
+    <header>
+        <h1>Espace Vendeur</h1>
+        <nav>
+            <a href="#" id="tab-products">Mes produits</a>
+            <a href="#" id="tab-seller-transactions">Mes transactions</a>
+        </nav>
+    </header>
+    <main>
+        <section id="products-section">
+            <h2>Gestion des produits</h2>
+            <table>
+                <thead>
+                    <tr><th>Produit</th><th>Prix</th><th>Action</th></tr>
+                </thead>
+                <tbody id="products-table"></tbody>
+            </table>
+        </section>
+        <section id="seller-transactions-section" style="display:none;">
+            <h2>Mes transactions</h2>
+            <table>
+                <thead>
+                    <tr><th>ID</th><th>Produit</th><th>Statut</th></tr>
+                </thead>
+                <tbody id="seller-transactions-table"></tbody>
+            </table>
+        </section>
+    </main>
+</div>
+
+<script>
+// Gestion affichage connexion/inscription
+document.getElementById('show-seller-register').onclick = function(e) {
+    e.preventDefault();
+    document.getElementById('seller-login-form').style.display = 'none';
+    document.getElementById('seller-register-form').style.display = 'block';
+};
+document.getElementById('show-seller-login').onclick = function(e) {
+    e.preventDefault();
+    document.getElementById('seller-register-form').style.display = 'none';
+    document.getElementById('seller-login-form').style.display = 'block';
+};
+
+// Simulation de connexion/inscription vendeur
+document.getElementById('seller-login').onsubmit = function(e) {
+    e.preventDefault();
+    document.getElementById('seller-auth-container').style.display = 'none';
+    document.getElementById('seller-space').style.display = 'block';
+};
+document.getElementById('seller-register').onsubmit = function(e) {
+    e.preventDefault();
+    document.getElementById('seller-auth-container').style.display = 'none';
+    document.getElementById('seller-space').style.display = 'block';
+};
+</script>
+<script src="seller.js"></script>
+</body>
+</html>

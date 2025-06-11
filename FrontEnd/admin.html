@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Interface Administrateur</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="logo">Nova<span>Shop</span></div>
+    <header>
+        <h1>Tableau de bord Administrateur</h1>
+        <nav>
+            <a href="#" id="tab-users">Utilisateurs</a>
+            <a href="#" id="tab-transactions">Transactions</a>
+            <a href="admin-login.html" class="nav-link-right">Déconnexion</a>
+            <a href="index.html" class="nav-link-right">Accueil</a>
+        </nav>
+    </header>
+    <main>
+        <section id="users-section">
+            <h2>Gestion des utilisateurs</h2>
+            <table>
+                <thead>
+                    <tr><th>Nom</th><th>Email</th><th>Rôle</th><th>Action</th></tr>
+                </thead>
+                <tbody id="users-table"></tbody>
+            </table>
+        </section>
+        <section id="transactions-section" style="display:none;">
+            <h2>Gestion des transactions</h2>
+            <table>
+                <thead>
+                    <tr><th>ID</th><th>Produit</th><th>Utilisateur</th><th>Statut</th></tr>
+                </thead>
+                <tbody id="transactions-table"></tbody>
+            </table>
+        </section>
+    </main>
+    <script src="admin.js"></script>
+</body>
+</html>

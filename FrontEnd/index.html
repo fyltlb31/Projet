@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>NovaShop</title>
+</head>
+<body style="background:none;">
+    <!-- Header fixé en haut -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">Nova<span>Shop</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#Accueil">Accueil</a></li>
+                  
+
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">À propos</a></li>
+                    <li><a href="#footer-services">Services</a></li>
+                    
+
+                    
+
+                </ul>
+            </nav>
+           
+    <div class="user-actions">
+       <a href="login.html" class="btn btn-primary">Se connecter</a>
+       <a href="register.html" class="btn btn-outline">S'inscrire</a>
+       <a href="admin.html" class="btn btn-outline" target="_blank">Admin</a>
+       <a href="seller.html" class="btn btn-outline" target="_blank">Vendeur</a>
+     <button id="cart-btn" class="btn btn-outline" style="position:relative;">
+        🛒 <span id="cart-count" style="background:#e74c3c;color:#fff;border-radius:50%;padding:2px 7px;font-size:0.9em;position:absolute;top:-8px;right:-8px;">0</span>
+     </button>
+    </div>
+
+        </div>
+    </header>
+
+    <div class="page-section" id="Accueil" style="position:relative;">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Réserver, Louez, Échangez ou Achetez des Produits</h1>
+                <p><strong>Trouvez les produits dont vous avez besoin, quand vous en avez besoin. Découvrez notre large sélection de produits disponibles à la location, l'échange ou l'achat.</strong></p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Que recherchez-vous ?">
+                    <button>Rechercher</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="page-section" style="position:relative;">
+      
+
+
+ <!-- Products Section -->
+        <section class="products">
+            <div class="container">
+                <h2 class="section-title">Produits Populaires</h2>
+                <!-- Barre de filtres détaillés -->
+                <div class="filters-bar" style="margin-bottom: 25px; display: flex; gap: 15px; flex-wrap: wrap;">
+                    <select id="filter-category">
+                        <option value="">Catégorie</option>
+                        <option value="Électronique">Électronique</option>
+                        <option value="Véhicules">Véhicules</option>
+                        <option value="Maison & Électroménager">Maison & Électroménager</option>
+                        <option value="Loisirs & Sport">Loisirs & Sport</option>
+                        <option value="Bricolage & Outils">Bricolage & Outils</option>
+                        <option value="Bagagerie & Accessoires">Bagagerie & Accessoires</option>
+                        <option value="Photo & Vidéo">Photo & Vidéo</option>
+                    </select>
+                    <select id="filter-etat">
+                        <option value="">État</option>
+                        <option value="Neuf">Neuf</option>
+                        <option value="Comme neuf">Comme neuf</option>
+                        <option value="Très bon">Très bon</option>
+                        <option value="Bon état">Bon état</option>
+                    </select>
+                    <select id="filter-ville">
+                        <option value="">Ville</option>
+                        <option value="Oran">Oran</option>
+                    </select>
+                    <input type="number" id="filter-prix-min" placeholder="Prix min (DZD)" style="width:110px;">
+                    <input type="number" id="filter-prix-max" placeholder="Prix max (DZD)" style="width:110px;">
+                    <button id="filter-btn" class="btn btn-primary" type="button">Filtrer</button>
+                    <button id="reset-filter-btn" class="btn btn-outline" type="button">Réinitialiser</button>
+                </div>
+                <div class="products-grid">
+                    <!-- Produit 1 -->
+                    <div class="product-card" data-category="Photo & Vidéo">
+                        <div class="product-image">
+                            <img src="camera.jpeg" alt="Appareil Photo Professionnel">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Appareil Photo Professionnel</h3>
+                            <p class="product-price">Location: 2500DZD / jour</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Comme neuf</li>
+                                <li><strong>Marque :</strong> Canon EOS 60D</li>
+                                <li><strong>Accessoires :</strong> Objectif 18-135mm, sacoche, batterie supplémentaire</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Louer</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 2 -->
+                    <div class="product-card" data-category="Bricolage & Outils">
+                        <div class="product-image">
+                            <img src="perceuse_sans_fil.jpeg" alt="Perceuse Sans Fil">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Perceuse Sans Fil</h3>
+                            <p class="product-price">Location: 1000DZD / jour</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Très bon</li>
+                                <li><strong>Marque :</strong> Bosch</li>
+                                <li><strong>Batterie :</strong> 2 batteries incluses</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Louer</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 3 -->
+                    <div class="product-card" data-category="Véhicules">
+                        <div class="product-image">
+                            <img src="velo_electrique.jpeg" alt="Vélo Électrique">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Vélo Électrique</h3>
+                            <p class="product-price">Vente: 2500DZD</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Bon état</li>
+                                <li><strong>Autonomie :</strong> 40 km</li>
+                                <li><strong>Accessoires :</strong> Chargeur, antivol</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Acheter</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 4 -->
+                    <div class="product-card" data-category="Loisirs & Sport">
+                        <div class="product-image">
+                            <img src="tente_de_camping.jpeg" alt="Tente de Camping">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Tente de Camping</h3>
+                            <p class="product-price">Échange proposé</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Comme neuf</li>
+                                <li><strong>Capacité :</strong> 4 personnes</li>
+                                <li><strong>Accessoires :</strong> Sardines, sac de transport</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Échanger</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 5 -->
+                    <div class="product-card" data-category="Électronique">
+                        <div class="product-image">
+                            <img src="pc_hp.jpg" alt="Ordinateur Portable HP">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Ordinateur Portable HP</h3>
+                            <p class="product-price">Vente: 85 000DZD</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Très bon</li>
+                                <li><strong>Processeur :</strong> Intel i5, 8Go RAM</li>
+                                <li><strong>Stockage :</strong> SSD 256Go</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Acheter</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 6 -->
+                    <div class="product-card" data-category="Véhicules">
+                        <div class="product-image">
+                            <img src="moto.jpg" alt="Moto 2024 Sport">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Moto 2024 Sport</h3>
+                            <p class="product-price">Vente: 1 350 000DZD</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Comme neuf</li>
+                                <li><strong>Marque :</strong> Yamaha</li>
+                                <li><strong>Modèle :</strong> R7 2024</li>
+                                <li><strong>Kilométrage :</strong> 1 200 km</li>
+                                <li><strong>Cylindrée :</strong> 689 cm³</li>
+                                <li><strong>Puissance :</strong> 120 ch</li>
+                                <li><strong>Couleur :</strong> Bleu Racing</li>
+                                <li><strong>Accessoires :</strong> Casque, gants, antivol</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Acheter</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 7 -->
+                    <div class="product-card" data-category="Véhicules">
+                        <div class="product-image">
+                            <img src="Q3.png" alt="Audi Q3 2022">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Audi Q3 2022</h3>
+                            <p class="product-price">Vente: 6 500 000DZD</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Comme neuf</li>
+                                <li><strong>Marque :</strong> Audi</li>
+                                <li><strong>Modèle :</strong> Q3 S Line</li>
+                                <li><strong>Année :</strong> 2022</li>
+                                <li><strong>Kilométrage :</strong> 55000 km</li>
+                                <li><strong>Motorisation :</strong> 2.0 TDI 150ch</li>
+                                <li><strong>Boîte :</strong> Automatique</li>
+                                <li><strong>Couleur :</strong> Noir</li>
+                                <li><strong>Options :</strong> GPS, caméra recul, toit ouvrant, jantes alu 18", clim auto, radar de stationnement</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Acheter</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 8 -->
+                    <div class="product-card" data-category="Véhicules">
+                        <div class="product-image">
+                            <img src="kangoo.jpeg" alt="Renault Kangoo 2022">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Renault Kangoo 2022</h3>
+                            <p class="product-price">Location: 7 000DZD / jour</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Très bon</li>
+                                <li><strong>Marque :</strong> Renault</li>
+                                <li><strong>Modèle :</strong> Kangoo 3</li>
+                                <li><strong>Année :</strong> 2022</li>
+                                <li><strong>Kilométrage :</strong> 73000 km</li>
+                                <li><strong>Motorisation :</strong> 1.5 dCi 100ch</li>
+                                <li><strong>Boîte :</strong> Manuelle</li>
+                                <li><strong>Capacité :</strong> 5 places / 3,3 m³ de chargement</li>
+                                <li><strong>Couleur :</strong> Gris</li>
+                                <li><strong>Options :</strong> Climatisation, Bluetooth, régulateur de vitesse, radar de recul</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Louer</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 9 -->
+                    <div class="product-card" data-category="Électronique">
+                        <div class="product-image">
+                            <img src="PS4.jpg" alt="Console PS4">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Console PS4</h3>
+                            <p class="product-price">Échange proposé</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Très bon</li>
+                                <li><strong>Jeux inclus :</strong> FIFA 22, GTA V</li>
+                                <li><strong>Accessoires :</strong> 2 manettes</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Échanger</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 10 -->
+                    <div class="product-card" data-category="Électronique">
+                        <div class="product-image">
+                            <img src="iphone14promax.webp" alt="iPhone 14 Pro Max">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">iPhone 14 Pro Max</h3>
+                            <p class="product-price">Vente: 170 000DZD</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Comme neuf</li>
+                                <li><strong>Stockage :</strong> 128Go</li>
+                                <li><strong>Couleur :</strong> Noir</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Acheter</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 11 -->
+                    <div class="product-card" data-category="Maison & Électroménager">
+                        <div class="product-image">
+                            <img src="machine à laver.webp" alt="Machine à Laver Samsung">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Machine à Laver Samsung</h3>
+                            <p class="product-price">Vente: 130000DZD</p> 
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Très bon</li>
+                                <li><strong>Capacité :</strong> 7kg</li>
+                                <li><strong>Programmes :</strong> 12</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Acheter</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 12 -->
+                    <div class="product-card" data-category="Véhicules">
+                        <div class="product-image">
+                            <img src="hoverboard.jpg" alt="Hoverboard">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Hoverboard</h3>
+                            <p class="product-price">Location: 800DZD / jour</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Bon état</li>
+                                <li><strong>Autonomie :</strong> 15 km</li>
+                                <li><strong>Accessoires :</strong> Chargeur inclus</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Louer</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 13 -->
+                    <div class="product-card" data-category="Électronique">
+                        <div class="product-image">
+                            <img src="tv_LG.jpg" alt="Télévision LG 4K">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Télévision LG 4K</h3>
+                            <p class="product-price">Vente: 60 000DZD</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Comme neuf</li>
+                                <li><strong>Taille :</strong> 55 pouces</li>
+                                <li><strong>Smart TV :</strong> Oui</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Acheter</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 14 -->
+                    <div class="product-card" data-category="Électronique">
+                        <div class="product-image">
+                            <img src="baffle_bleutooth_jbl.jpg" alt="Enceinte Bluetooth JBL">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Enceinte Bluetooth JBL</h3>
+                            <p class="product-price">Échange proposé</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Très bon</li>
+                                <li><strong>Autonomie :</strong> 10h</li>
+                                <li><strong>Couleur :</strong> Rouge</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Échanger</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 15 -->
+                    <div class="product-card" data-category="Véhicules">
+                        <div class="product-image">
+                            <img src="velo_btwin.jpg" alt="Vélo de Route B'Twin">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Vélo de Route B'Twin</h3>
+                            <p class="product-price">Vente: 35 000DZD</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Bon état</li>
+                                <li><strong>Taille :</strong> M</li>
+                                <li><strong>Accessoires :</strong> Casque, pompe</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Acheter</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 16 -->
+                    <div class="product-card" data-category="Loisirs & Sport">
+                        <div class="product-image">
+                            <img src="chaise_gamer.jpeg" alt="Chaise Gamer">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Chaise Gamer</h3>
+                            <p class="product-price">Location: 500DZD / jour</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Très bon</li>
+                                <li><strong>Marque :</strong> DXRacer</li>
+                                <li><strong>Couleur :</strong> Noir/Rouge</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Louer</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 17 -->
+                    <div class="product-card" data-category="Loisirs & Sport">
+                        <div class="product-image">
+                            <img src="planche_surf.jpeg" alt="Planche de Surf">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Planche de Surf</h3>
+                            <p class="product-price">Échange proposé</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Bon état</li>
+                                <li><strong>Taille :</strong> 2m</li>
+                                <li><strong>Accessoires :</strong> Leash, wax</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Échanger</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 18 -->
+                    <div class="product-card" data-category="Maison & Électroménager">
+                        <div class="product-image">
+                            <img src="microondes_samsung.jpg" alt="Micro-ondes Samsung">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Micro-ondes Samsung</h3>
+                            <p class="product-price">Vente: 12 000DZD</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Très bon</li>
+                                <li><strong>Capacité :</strong> 23L</li>
+                                <li><strong>Fonctions :</strong> Grill, décongélation</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Acheter</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 19 -->
+                    <div class="product-card" data-category="Bagagerie & Accessoires">
+                        <div class="product-image">
+                            <img src="valise.webp" alt="Valise Cabine Samsonite">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Valise Cabine Samsonite</h3>
+                            <p class="product-price">Location: 400DZD / jour</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Comme neuf</li>
+                                <li><strong>Capacité :</strong> 40L</li>
+                                <li><strong>Couleur :</strong> Bleu</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Louer</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 20 -->
+                    <div class="product-card" data-category="Maison & Électroménager">
+                        <div class="product-image">
+                            <img src="asperateur_à_main.jpg" alt="Aspirateur à Main Black+Decker">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Aspirateur à Main Black+Decker</h3>
+                            <p class="product-price">Location: 300DZD / jour</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Très bon</li>
+                                <li><strong>Autonomie :</strong> 20 min</li>
+                                <li><strong>Accessoires :</strong> 2 embouts</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Louer</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 21 -->
+                    <div class="product-card" data-category="Électronique">
+                        <div class="product-image">
+                            <img src="baffle sony.jpeg" alt="Enceinte Sony SRS-XB12">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Enceinte Sony SRS-XB12</h3>
+                            <p class="product-price">Vente: 6 000DZD</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Comme neuf</li>
+                                <li><strong>Autonomie :</strong> 16h</li>
+                                <li><strong>Couleur :</strong> Vert</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Acheter</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 22 -->
+                    <div class="product-card" data-category="Électronique">
+                        <div class="product-image">
+                            <img src="ps5.jpeg" alt="Console PS5">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Console PS5</h3>
+                            <p class="product-price">Vente: 180 000DZD</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Neuf</li>
+                                <li><strong>Jeux inclus :</strong> Spider-Man, Ratchet & Clank</li>
+                                <li><strong>Accessoires :</strong> 1 manette</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Acheter</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 23 -->
+                    <div class="product-card" data-category="Électronique">
+                        <div class="product-image">
+                            <img src="airpods_pro.jpeg" alt="Apple AirPods Pro">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Apple AirPods Pro</h3>
+                            <p class="product-price">Échange proposé</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Très bon</li>
+                                <li><strong>Accessoires :</strong> Boîte, câble</li>
+                                <li><strong>Autonomie :</strong> 4h</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Échanger</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 24 -->
+                    <div class="product-card" data-category="Maison & Électroménager">
+                        <div class="product-image">
+                            <img src="robot_de_cuisine_moulinex.jpeg" alt="Robot de Cuisine Moulinex">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Robot de Cuisine Moulinex</h3>
+                            <p class="product-price">Location: 1000DZD / jour</p>
+                            <ul class="product-details">
+                                <li><strong>État :</strong> Très bon</li>
+                                <li><strong>Fonctions :</strong> Mixer, râper, pétrir</li>
+                                <li><strong>Accessoires :</strong> 5 lames</li>
+                                <li><strong>Disponibilité :</strong> Oran</li>
+                            </ul>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-primary">Louer</a>
+                                <a href="#" class="btn btn-outline btn-details">Détails</a>
+                                 <button class="btn btn-outline btn-add-cart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </div>
+    
+    <!-- Services Section -->
+    <div class="page-section" id="footer-services" style="position:relative;">
+        <section class="service-section" id="services">
+            <div class="container">
+                <h2 class="section-title">Choisissez un Service</h2>
+                <p class="section-description">Sélectionnez le service que vous souhaitez effectuer sur notre plateforme.</p>
+                <div class="services-grid">
+                    <!-- Vente -->
+                    <div class="service-card" id="vente-card">
+                        <div class="service-image"><img src="vente.jpg" alt="Service Vente"></div>
+                        <div class="service-info">
+                            <h3>Vente</h3>
+                            <p>Proposez vos produits à la vente, neufs ou d'occasion.</p>
+                            <a href="#" class="btn btn-primary">Vendre un produit</a>
+                        </div>
+                    </div>
+                    <!-- Achat -->
+                    <div class="service-card" id="achat-card">
+                        <div class="service-image"><img src="achat.png" alt="Service Achat"></div>
+                        <div class="service-info">
+                            <h3>Achat</h3>
+                            <p>Achetez des produits directement auprès de nos membres.</p>
+                            <a href="#" class="btn btn-primary">Acheter maintenant</a>
+                        </div>
+                    </div>
+                    <!-- Location -->
+                    <div class="service-card" id="location-card">
+                        <div class="service-image"><img src="location.jpg" alt="Service Location"></div>
+                        <div class="service-info">
+                            <h3>Location</h3>
+                            <p>Louez des produits pour une durée déterminée à petit prix.</p>
+                            <a href="#" class="btn btn-primary">Louer un produit</a>
+                        </div>
+                    </div>
+                    <!-- Réservation -->
+                    <div class="service-card" id="reservation-card">
+                        <div class="service-image"><img src="reservation.png" alt="Service Réservation"></div>
+                        <div class="service-info">
+                            <h3>Réservation</h3>
+                            <p>Réservez un produit à l'avance pour garantir sa disponibilité.</p>
+                            <a href="#" class="btn btn-primary">Réserver maintenant</a>
+                        </div>
+                    </div>
+                    <!-- Livraison -->
+                    <div class="service-card" id="livraison-card">
+                        <div class="service-image"><img src="livraison.jpg" alt="Service Livraison"></div>
+                        <div class="service-info">
+                            <h3>Livraison</h3>
+                            <p>Faites livrer vos produits à domicile en toute sécurité.</p>
+                            <a href="#" class="btn btn-primary">Choisir la livraison</a>
+                        </div>
+                    </div>
+                    <!-- Échange -->
+                    <div class="service-card" id="echange-card">
+                        <div class="service-image"><img src="echange.webp" alt="Service Échange"></div>
+                        <div class="service-info">
+                            <h3>Échange</h3>
+                            <p>Échangez vos produits facilement avec d'autres utilisateurs.</p>
+                            <a href="#" class="btn btn-primary">Choisir l'échange</a>
+                        </div>
+                    </div>
+                    <!-- Ajout accès Admin -->
+                    <div class="service-card" id="admin-card">
+                        <div class="service-image"><img src="admin.png" alt="Interface Admin"></div>
+                        <div class="service-info">
+                            <h3>Espace Admin</h3>
+                            <p>Gérez les utilisateurs et les transactions de la plateforme.</p>
+                            <a href="admin.html" class="btn btn-primary" target="_blank">Accès Admin</a>
+                        </div>
+                    </div>
+                    <!-- Ajout accès Vendeur -->
+                    <div class="service-card" id="vendeur-card">
+                        <div class="service-image"><img src="vendeur.png" alt="Interface Vendeur"></div>
+                        <div class="service-info">
+                            <h3>Espace Vendeur</h3>
+                            <p>Gérez vos produits et vos transactions de vente.</p>
+                            <a href="seller.html" class="btn btn-primary" target="_blank">Accès Vendeur</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="page-section" style="position:relative;">
+        <section class="cta">
+            <div class="container">
+                <h2>Vous avez des produits à louer ou à échanger ?</h2>
+                <p>Inscrivez-vous dès maintenant et commencez à partager vos produits avec notre communauté. C'est simple, rapide et sécurisé !</p>
+                <a href="register.html" class="btn btn-primary">Créer un compte</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact & À propos -->
+    <div class="page-section" id="contact" style="position:relative;">
+        <section class="contact-section">
+            <div class="container">
+                <h2>Contact & À propos</h2>
+                <p>Email : NovaShop3100@gmail.com</p>
+                <p>Tél : 0555052702</p>
+                <p>Adresse : Oran</p>
+                <p>NovaShop est une plateforme développée dans le cadre d'un projet de fin d'études en informatique, pour simplifier les transactions en ligne (achat, vente, échange, location, réservation).</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NovaShop. Tous droits réservés.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

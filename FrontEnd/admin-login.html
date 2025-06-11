@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion Admin - NovaShop</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .login-container { max-width: 400px; margin: 60px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px #0001; }
+        .login-container h2 { color: #3498db; text-align: center; }
+        .login-container label { display: block; margin-top: 15px; }
+        .login-container input { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
+        .login-container button { width: 100%; margin-top: 20px; }
+        /* Désactive le centrage du logo local, laisse le style global gérer */
+        /* .logo { font-size: 2rem; font-weight: bold; color: #3498db; text-align: center; margin-bottom: 20px; }
+        .logo span { color: #e67e22; } */
+    </style>
+</head>
+<body class="login-page">
+    <header>
+        <div class="container header-content">
+            <div class="logo">Nova<span>Shop</span></div>
+        </div>
+    </header>
+    <div class="login-container">
+        <h2>Connexion Admin</h2>
+        <form>
+            <label for="admin-email">Email</label>
+            <input type="email" id="admin-email" required>
+            <label for="admin-password">Mot de passe</label>
+            <input type="password" id="admin-password" required>
+            <button type="submit" class="btn btn-primary">Se connecter</button>
+        </form>
+        <p style="text-align:center;margin-top:15px;">
+            <a href="admin-register.html">Créer un compte admin</a>
+        </p>
+        <p style="text-align:center;">
+            <a href="index.html">Retour à l'accueil</a>
+        </p>
+    </div>
+</body>
+</html>
